@@ -1,4 +1,4 @@
-override fun onCreate(savedInstanceState: Bundle?) {
+ override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             // Enter each layout function here to see their UI effect
@@ -38,10 +38,13 @@ fun ImageCard(
             // anything entered into this block will be stacked on each other as a stack
 
             Image(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxSize().clickable {
+                                 // enter click function
+                },
                 painter = painter,
                 contentDescription = contentDescription,
                 contentScale = ContentScale.Crop
+
             )
 
             Box(modifier = Modifier
